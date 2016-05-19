@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var heroes_component_1 = require('./heroes.component');
 var hero_service_1 = require('./hero.service');
+var hero_detail_component_1 = require('./hero-detail.component');
 var dashboard_component_1 = require('./dashboard.component');
 var AppComponent = (function () {
     function AppComponent() {
@@ -29,6 +30,11 @@ var AppComponent = (function () {
                 name: 'Dashboard',
                 component: dashboard_component_1.DashboardComponent,
                 useAsDefault: true
+            },
+            {
+                path: '/detail/:id',
+                name: 'HeroDetail',
+                component: hero_detail_component_1.HeroDetailComponent
             }
         ]),
         core_1.Component({
