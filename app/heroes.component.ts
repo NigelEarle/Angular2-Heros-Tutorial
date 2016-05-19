@@ -16,7 +16,12 @@ import { HeroService } from './hero.service';
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    <div *ngIf="selectedHero">
+      <h2>
+        {{selecteHero.name | uppercase }} is my hero
+      </h2>
+      <button (click)="goToDetail()">View Details</button>
+    </div>
   `,
   styles: [`
     .selected {
@@ -66,8 +71,7 @@ import { HeroService } from './hero.service';
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `],
-  directives: [HeroDetailComponent]
+  `]
 
 })
 
